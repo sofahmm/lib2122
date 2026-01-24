@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ec913dd8850d48bf886b707c8b4cd242" Name="Diagram1">
+        <EntityTypeShape EntityType="libraryKIUModel.Author" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryKIUModel.Book" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryKIUModel.Employee" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryKIUModel.Gender" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryKIUModel.HistoryReaderTicket" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryKIUModel.Janr" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryKIUModel.Post" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryKIUModel.Reader" Width="1.5" PointX="0.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryKIUModel.ReaderTicket" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryKIUModel.Shelf" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryKIUModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="libraryKIUModel.FK_Book_Author" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryKIUModel.FK_Book_Janr" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryKIUModel.FK_Book_Shelf" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryKIUModel.FK_HistoryReaderTicket_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryKIUModel.FK_Employee_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryKIUModel.FK_Employee_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryKIUModel.FK_HistoryReaderTicket_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryKIUModel.FK_Reader_Gender1" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryKIUModel.FK_HistoryReaderTicket_ReaderTicket" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryKIUModel.FK_ReaderTicket_Reader" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
