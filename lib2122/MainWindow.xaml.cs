@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using lib2122.DbConnection;
+using lib2122.Windows;
 
 namespace lib2122
 {
@@ -39,7 +40,10 @@ namespace lib2122
             //ищем нужного юзера
             Employee currentUser = employees.FirstOrDefault(i => i.Login.Trim() == login && i.Password.Trim() == password);
             if (currentUser != null)
-                MessageBox.Show("Good");
+            {
+                MenuBibloteqarWindow menuBibloteqarWindow = new MenuBibloteqarWindow();
+                menuBibloteqarWindow.Show();
+            }
             else
                 MessageBox.Show("Not good");
 
