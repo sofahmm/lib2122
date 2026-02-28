@@ -23,12 +23,14 @@ namespace lib2122.Pages
     {
         public static List<Reader> readers { get; set; }
         public static List<string> sorts { get; set; }
+        public static List<Gender> genders { get; set; }
         public ReadersPage()
         {
             InitializeComponent();
             readers = new List<Reader>(ConnectionString.libraryKIUEntities.Reader.ToList());
             sorts = new List<string> { "Сбросить сортировку", "A -> Я", "Я -> А" };
             sortCmb.ItemsSource = sorts;
+            genders = new List<Gender>(ConnectionString.libraryKIUEntities.Gender.ToList());
             this.DataContext = this;
         }
 
@@ -54,6 +56,18 @@ namespace lib2122.Pages
                 readersLv.ItemsSource = new List<Reader>(ConnectionString.libraryKIUEntities.Reader.
                 OrderByDescending(i => i.FIO).ToList());
             }
+        }
+
+        private void GenderFilterCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var gen = GenderFilterCmb.SelectedItem as Gender;
+            readersLv.ItemsSource = new List<Reader>(ConnectionString.libraryKIUEntities.Reader.
+                Where(i => i.IdGender == gen.Id).ToList());
+        }
+
+        private void AddPageBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddReaderPage());
         }
     }
 }
